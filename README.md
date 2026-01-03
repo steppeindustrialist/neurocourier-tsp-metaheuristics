@@ -24,7 +24,7 @@ python3 -m venv .venv
 source .venv/bin/activate
 pip install -e .
 ```
-### Usage Example
+# Usage Example
 ```
 from neurocourier.tsp.instances import generate_uniform_points
 from neurocourier.tsp.distance import euclidean_distance_matrix
