@@ -16,16 +16,16 @@ The project is framed around a fictional logistics company (NeuroCourier) that m
 Therefore, we focus on approximation via metaheuristics.
 
 # Installation:
-'''
+```
 git clone https://github.com/steppeindustrialist/neurocourier-tsp-metaheuristics
 cd neurocourier-tsp-metaheuristics
 
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -e .
-'''
+```
 ### Usage Example
-'''
+```
 from neurocourier.tsp.instances import generate_uniform_points
 from neurocourier.tsp.distance import euclidean_distance_matrix
 from neurocourier.solvers import (
@@ -34,21 +34,21 @@ from neurocourier.solvers import (
     ACOParams,
     ant_colony_optimize,
 )
-'''
+```
 ### Generate synthetic instance
-'''
+```
 pts = generate_uniform_points(50, seed=1)
 dist = euclidean_distance_matrix(pts)
-'''
+```
 ### Run Simulated Annealing
-'''
+```
 sa_res = simulated_annealing_tsp(
     dist,
     SAParams(seed=1, max_seconds=0.3)
 )
-'''
+```
  ### Run Ant Colony Optimization
- '''
+ ```
 aco_res = ant_colony_optimize(
     dist,
     ACOParams(seed=1, iterations=50)
@@ -56,4 +56,4 @@ aco_res = ant_colony_optimize(
 
 print("SA cost:", sa_res.best_cost)
 print("ACO cost:", aco_res.best_cost)
-'''
+```
