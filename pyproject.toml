@@ -1,0 +1,16 @@
+[project]
+name = "neurocourier"
+version = "0.1.0"
+description = "Metaheuristics for Metric TSP (SA & ACO)"
+requires-python = ">=3.9"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["neurocourier*"]
