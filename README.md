@@ -57,3 +57,25 @@ aco_res = ant_colony_optimize(
 print("SA cost:", sa_res.best_cost)
 print("ACO cost:", aco_res.best_cost)
 ```
+### One-Block Simple Demo
+```
+git clone https://github.com/steppeindustrialist/neurocourier-tsp-metaheuristics && \
+cd neurocourier-tsp-metaheuristics && \
+python3 -m venv .venv && \
+source .venv/bin/activate && \
+pip install -e . && \
+python - <<'PY'
+from neurocourier.tsp.instances import generate_uniform_points
+from neurocourier.tsp.distance import euclidean_distance_matrix
+from neurocourier.solvers import SAParams, simulated_annealing_tsp, ACOParams, ant_colony_optimize
+
+pts = generate_uniform_points(50, seed=1)
+dist = euclidean_distance_matrix(pts)
+
+sa = simulated_annealing_tsp(dist, SAParams(max_seconds=0.3))
+aco = ant_colony_optimize(dist, ACOParams(iterations=50))
+
+print("Simulated Annealing cost:", sa.best_cost)
+print("Ant Colony Optimization cost:", aco.best_cost)
+PY
+```
