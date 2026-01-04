@@ -79,3 +79,12 @@ print("Simulated Annealing cost:", sa.best_cost)
 print("Ant Colony Optimization cost:", aco.best_cost)
 PY
 ```
+### One-Block Benchmark
+```
+git clone git@github.com:steppeindustrialist/neurocourier-tsp-metaheuristics.git && \
+cd neurocourier-tsp-metaheuristics && \
+python3 -m venv .venv && \
+source .venv/bin/activate && \
+pip install -e . && \
+python experiments/benchmark.py --sizes 20,50,100 --runs 5 --sa_seconds 0.3 --aco_iters 60
+```
