@@ -2,10 +2,18 @@
 __pycache__/
 *.py[codz]
 *$py.class
-
+# Experiment results
+results/*.csv
 # DS store
 .DS_Store
 src/*.egg-info/
+
+# Local / OS junk
+.DS_Store
+.Rhistory
+
+# Results/outputs
+results/
 
 # C extensions
 *.so
