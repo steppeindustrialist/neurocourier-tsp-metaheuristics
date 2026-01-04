@@ -86,5 +86,7 @@ cd neurocourier-tsp-metaheuristics && \
 python3 -m venv .venv && \
 source .venv/bin/activate && \
 pip install -e . && \
+mkdir -p results && \
 python experiments/benchmark.py --sizes 20,50,100 --runs 5 --sa_seconds 0.3 --aco_iters 60
+
 ```
