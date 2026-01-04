@@ -81,7 +81,7 @@ PY
 ```
 ### One-Block Benchmark
 ```
-git clone git@github.com:steppeindustrialist/neurocourier-tsp-metaheuristics.git && \
+git clone https://github.com/steppeindustrialist/neurocourier-tsp-metaheuristics/tree/main && \
 cd neurocourier-tsp-metaheuristics && \
 python3 -m venv .venv && \
 source .venv/bin/activate && \
